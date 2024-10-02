@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    image: mysql:latest
+    container_name: passport
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=shadman
+      - MYSQL_DATABASE=passport
+    volumes:
+      - ./data:/var/lib/mysql
+
+
+
